@@ -42,6 +42,8 @@ Pass [`--refresh-ad-hoc-provisioning-profile`](/eas/cli/#eas-build) with `--non-
   ]}
 />
 
+For [EAS Workflows](/eas/workflows/get-started), set `refresh_ad_hoc_provisioning_profile: true` on a `type: build` job with the same profile requirements. See the [build job parameters](/eas/workflows/pre-packaged-jobs#build).
+
 The profile must set [`"distribution": "internal"`](/eas/json/#distribution) and use [credentials managed by EAS](/app-signing/app-credentials/) with [`"credentialsSource": "remote"`](/eas/json/#credentialssource) (`local` is not supported). You need at least one device from [`eas device:create`](/eas/cli/#eas-devicecreate) and an App Store Connect API key in CI through [environment variables](/build/building-on-ci/#optional-provide-an-asc-api-token-for-your-apple-team) (`EXPO_ASC_API_KEY_PATH`, `EXPO_ASC_KEY_ID`, and `EXPO_ASC_ISSUER_ID`) or a key stored in EAS for submissions on the project.
 
 ### Managing devices

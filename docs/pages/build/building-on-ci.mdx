@@ -54,6 +54,8 @@ jobs:
 
 When a commit is pushed to the main branch, this workflow will create Android and iOS builds. You can learn how to modify this workflow and sequence other types of jobs in the [EAS Workflows documentation](/eas/workflows/get-started).
 
+For iOS internal distribution builds that must include newly registered test devices, set `refresh_ad_hoc_provisioning_profile: true` on the build job. See the [build job parameters](/eas/workflows/pre-packaged-jobs#build).
+
 ## Configuring your app for other CI services
 
 {/* TODO: We can probably leave this out -- users can figure out on their own if they want to do this or use npx */}
